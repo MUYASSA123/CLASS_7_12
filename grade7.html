@@ -184,4 +184,51 @@ c = n % 10
 print(a**2 + b**2 + c**2)</code></pre><p>الناتج للعدد 485 هو 105.</p></article><article class="project-card"><h3>🐢 تحدي الرسم</h3><p>قسّم الشكل إلى خطوات صغيرة ثم اكتب برنامج Turtle يرسمه.</p></article></div>
 <div class="challenge"><h3>🏆 تحدي نهائي</h3><p>اكتب برنامجًا يستقبل ثلاث علامات، يحسب المتوسط، ثم يطبع Excellent إذا كان المتوسط 90 فأكثر، Pass إذا كان 60 فأكثر، وإلا Fail.</p><textarea id="final-code" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkFinal()">افحص الحل</button><button class="secondary" onclick="clearEditor('final-code','final-result')">مسح</button></div><div id="final-result" class="result"></div></div></section>
 <section class="tips"><h2>طريقة التعلم</h2><div class="tip-grid"><div><b>1. اقرأ</b><span>افهم الشرح بالعربية.</span></div><div><b>2. شاهد</b><span>راجع أكثر من مثال.</span></div><div><b>3. اكتب</b><span>جرّب الحل بنفسك.</span></div><div><b>4. افحص</b><span>اعرف أين أخطأت.</span></div></div></section>
+
+<section class="topic" id="ministry-exams">
+<div class="topic-head"><span class="num">09</span><div><h2>أسئلة بنمط امتحانات الوزارة</h2><p>تدريب متنوع على قراءة الكود، إكماله، تصحيح الأخطاء وكتابة برامج قصيرة.</p></div></div>
+<div class="concept-box"><h3>كيف تتدرّب؟</h3><p>اقرأ السؤال أولًا، حاول الحل على ورقة أو في محرر Python، ثم افتح الحل المقترح للمقارنة. الأسئلة هنا تدريبية ومصاغة بنمط امتحاني.</p></div>
+<div class="examples-grid">
+<article class="example-card"><h3>1. أكمل الكود</h3><p>أكمل البرنامج ليطبع <b>I Love Python</b> بحيث تظهر كل كلمة في سطر منفصل.</p><pre><code>print("I___Love___Python")</code></pre><details><summary>الحل المقترح</summary><pre><code>print("I\nLove\nPython")</code></pre></details></article>
+<article class="example-card"><h3>2. ما ناتج البرنامج؟</h3><pre><code>m = "H" + "L" * 2 + "WORLD"
+w = "World"
+print(m + w)</code></pre><details><summary>الحل المقترح</summary><p><code>HLLWORLDWorld</code></p></details></article>
+<article class="example-card"><h3>3. أكمل أمر التحويل</h3><p>أكمل السطر حتى تصبح القيمة النصية <code>"87"</code> عددًا صحيحًا.</p><pre><code>num = ___("87")
+print(num)</code></pre><details><summary>الحل المقترح</summary><pre><code>num = int("87")
+print(num)</code></pre></details></article>
+<article class="example-card"><h3>4. اكتشف الخطأ وصححه</h3><p>البرنامج التالي يجب أن يستقبل عمر الطالب كعدد صحيح ثم يطبعه.</p><pre><code>age = input()
+print(age + 1)</code></pre><details><summary>الحل المقترح</summary><p>القيمة القادمة من <code>input()</code> نص. نحولها إلى عدد صحيح:</p><pre><code>age = int(input())
+print(age + 1)</code></pre></details></article>
+<article class="example-card"><h3>5. تعويض قيمة في متغير</h3><p>اكتب برنامجًا يعرّف المتغير <code>x</code> بالقيمة 10، ثم يغيّر قيمته إلى 25 ويطبع القيمة الجديدة.</p><details><summary>الحل المقترح</summary><pre><code>x = 10
+x = 25
+print(x)</code></pre></details></article>
+<article class="example-card"><h3>6. استدعاء دالة جاهزة</h3><p>أُعطيت الدالة التالية. اكتب سطرًا واحدًا لاستدعائها بالقيمة 5.</p><pre><code>def square(num):
+    print(num ** 2)</code></pre><details><summary>الحل المقترح</summary><pre><code>square(5)</code></pre></details></article>
+<article class="example-card"><h3>7. دالة فيها أخطاء</h3><p>في الكود ثلاثة أخطاء: خطأ في تعريف الدالة، خطأ في أحد الأوامر، وخطأ في الاستدعاء. صححها.</p><pre><code>def triangle()
+    t.forward(80)
+    t.right(120)
+    t.forword(80)
+    t.right(120)
+    t.forward(80)
+triangle</code></pre><details><summary>الحل المقترح</summary><pre><code>def triangle():
+    t.forward(80)
+    t.right(120)
+    t.forward(80)
+    t.right(120)
+    t.forward(80)
+triangle()</code></pre></details></article>
+<article class="example-card"><h3>8. ماذا يرسم Turtle؟</h3><pre><code>t.forward(100)
+t.right(90)
+t.forward(100)
+t.right(90)
+t.forward(100)
+t.right(90)
+t.forward(100)</code></pre><details><summary>الحل المقترح</summary><p>يرسم مربعًا طول ضلعه 100 وحدة.</p></details></article>
+<article class="example-card"><h3>9. سؤال تفكير</h3><p>ما الفرق بين <code>print("5" + "3")</code> و <code>print(5 + 3)</code>؟</p><details><summary>الحل المقترح</summary><p>الأول يطبع <code>53</code> لأن القيم نصوص، والثاني يطبع <code>8</code> لأن القيم أعداد.</p></details></article>
+<article class="example-card"><h3>10. كتابة برنامج</h3><p>اكتب برنامجًا يستقبل اسم الطالب وعلامته كعدد صحيح، ثم يطبع الاسم والعلامة كل واحدة في سطر.</p><details><summary>الحل المقترح</summary><pre><code>name = input()
+grade = int(input())
+print(name)
+print(grade)</code></pre></details></article>
+</div>
+</section>
 </main><script src="https://cdn.jsdelivr.net/pyodide/v0.27.2/full/pyodide.js"></script><script src="script.js"></script></body></html>
