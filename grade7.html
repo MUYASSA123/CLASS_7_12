@@ -4,12 +4,77 @@
 <main class="learning-page"><section class="hero"><div><span class="eyebrow">المسار الكامل</span><h2>تعلّم، اكتب، افحص، وصحّح</h2><p>كل موضوع فيه عدة أمثلة وتمارين تفاعلية. اكتب الحل بنفسك ثم اضغط «افحص الحل». سيخبرك الموقع إن كان صحيحًا، ويعرض الخطأ عند وجوده.</p></div><div class="hero-note"><b>العربي</b> ← من اليمين إلى اليسار<br><code>Python</code> → من اليسار إلى اليمين</div></section>
 <nav class="topic-nav"><a href="#basics">الأساسيات</a><a href="#turtle">Turtle</a><a href="#variables">المتغيرات والحساب</a><a href="#conditions">الشروط</a><a href="#loops">الحلقات</a><a href="#functions">الدوال</a><a href="#images">الصور</a><a href="#project">المشروع</a></nav>
 
-<section class="topic" id="basics"><div class="topic-title"><span>01</span><div><h2>الأساسيات والخوارزمية</h2><p>البرنامج، التسلسل، الإخراج، التعليقات ومتابعة التنفيذ.</p></div></div>
-<div class="example-grid"><article class="example"><h3>مثال 1 — طباعة</h3><pre><code>print("Hello Python")</code></pre><p>تعرض <code>print()</code> نتيجة على الشاشة.</p></article><article class="example"><h3>مثال 2 — عدة أسطر</h3><pre><code>print("Name")
-print("Age")</code></pre></article><article class="example"><h3>مثال 3 — تعليق</h3><pre><code># This is a comment
-print("Start")</code></pre></article></div>
-<div class="interactive-exercise" data-id="b1" data-expected="Maya\n13" data-input=""><h3>✍️ جرّب بنفسك</h3><p>اكتب برنامجًا يطبع اسمك ثم عمرك، كل واحد في سطر.</p><textarea id="code-b1" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('b1')">افحص الحل</button><button class="secondary" onclick="showSolution('b1')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-b1','result-b1')">مسح</button></div><div id="result-b1" class="result"></div></div>
-<div class="interactive-exercise" data-id="b2" data-expected="I\nLove\nPython" data-input=""><h3>✍️ جرّب بنفسك</h3><p>اطبع الكلمات I وLove وPython في ثلاثة أسطر.</p><textarea id="code-b2" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('b2')">افحص الحل</button><button class="secondary" onclick="showSolution('b2')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-b2','result-b2')">مسح</button></div><div id="result-b2" class="result"></div></div></section>
+<section class="topic" id="basics"><div class="topic-title"><span>01</span><div><h2>الأساسيات — الطباعة والمتغيرات والاستقبال</h2><p>نتعلم كيف نطبع المعلومات، نعرّف المتغيرات، نغيّر قيمها، ونستقبل أعدادًا صحيحة وعشرية ونصوصًا من المستخدم.</p></div></div>
+
+<div class="concept-box"><h3>🧠 قبل أن نكتب الكود</h3><ul>
+<li><b>الخوارزمية:</b> خطوات مرتبة لحل مشكلة أو تنفيذ مهمة.</li>
+<li><b>البرنامج:</b> مجموعة أوامر يكتبها المبرمج ليقوم الحاسوب بتنفيذها.</li>
+<li><b>التسلسل:</b> تنفَّذ الأوامر من الأعلى إلى الأسفل، إلا إذا غيّرنا مسار التنفيذ بأمر آخر.</li>
+<li><b>التعليق:</b> نستخدم <code>#</code> لكتابة ملاحظة لا ينفذها Python.</li>
+</ul></div>
+
+<div class="example-grid">
+<article class="example"><h3>مثال 1 — طباعة نص</h3><pre><code>print("Hello Python")</code></pre><p>الأمر <code>print()</code> يعرض المعلومات على الشاشة.</p></article>
+<article class="example"><h3>مثال 2 — طباعة رقم</h3><pre><code>print(25)
+print(7 + 3)</code></pre><p>يمكن طباعة رقم أو نتيجة عملية حسابية.</p></article>
+<article class="example"><h3>مثال 3 — طباعة عدة أسطر</h3><pre><code>print("Maya")
+print(13)
+print("Grade 7")</code></pre><p>كل أمر <code>print()</code> يطبع في سطر جديد.</p></article>
+<article class="example"><h3>مثال 4 — طباعة عدة قيم</h3><pre><code>name = "Maya"
+age = 13
+print(name, age)</code></pre><p>الفاصلة داخل <code>print()</code> تفصل بين القيم.</p></article>
+<article class="example"><h3>مثال 5 — النص مع \n</h3><pre><code>print("I\nLove\nPython")</code></pre><p><code>\n</code> تعني الانتقال إلى سطر جديد.</p></article>
+<article class="example"><h3>مثال 6 — التعليق</h3><pre><code># This is a comment
+print("Start")</code></pre><p>السطر الذي يبدأ بـ <code>#</code> لا يتم تنفيذه.</p></article>
+<article class="example"><h3>مثال 7 — تعريف متغير</h3><pre><code>age = 13
+name = "Ali"
+height = 1.55</code></pre><p>نضع قيمة داخل متغير باستخدام علامة <code>=</code>.</p></article>
+<article class="example"><h3>مثال 8 — تعويض قيمة جديدة</h3><pre><code>age = 13
+age = 14
+print(age)</code></pre><p>يمكن إعطاء المتغير قيمة جديدة، والقيمة الجديدة تحل محل القديمة.</p></article>
+<article class="example"><h3>مثال 9 — عدد صحيح int</h3><pre><code>age = 13
+print(age)</code></pre><p>العدد الصحيح مثل <code>13</code> لا يحتوي على فاصلة عشرية.</p></article>
+<article class="example"><h3>مثال 10 — عدد عشري float</h3><pre><code>height = 1.55
+print(height)</code></pre><p>العدد العشري مثل <code>1.55</code>.</p></article>
+<article class="example"><h3>مثال 11 — نص str</h3><pre><code>name = "Maya"
+print(name)</code></pre><p>النص يوضع بين علامات اقتباس.</p></article>
+<article class="example"><h3>مثال 12 — استقبال عدد صحيح</h3><pre><code>age = int(input())
+print(age)</code></pre><p><code>input()</code> يستقبل نصًا، لذلك نستخدم <code>int()</code> عندما نريد عددًا صحيحًا.</p></article>
+<article class="example"><h3>مثال 13 — استقبال عدد عشري</h3><pre><code>height = float(input())
+print(height)</code></pre><p>نستخدم <code>float()</code> عندما تكون القيمة عددًا عشريًا.</p></article>
+<article class="example"><h3>مثال 14 — استقبال نص</h3><pre><code>name = input()
+print(name)</code></pre><p>لا نحتاج إلى تحويل عندما نريد استقبال نص.</p></article>
+<article class="example"><h3>مثال 15 — استقبال ثم حساب</h3><pre><code>num = int(input())
+print(num + 10)</code></pre><p>نستقبل العدد، نخزنه في متغير، ثم نستخدمه في عملية حسابية.</p></article>
+<article class="example"><h3>مثال 16 — استقبال أكثر من قيمة</h3><pre><code>age = int(input())
+height = float(input())
+name = input()
+print(age)
+print(height)
+print(name)</code></pre><p>يمكن استقبال قيم من أنواع مختلفة، كل قيمة في سطر إدخال مستقل.</p></article>
+</div>
+
+<div class="interactive-exercise" data-id="b1" data-expected="Maya\n13" data-input=""><h3>✍️ سؤال 1 — أوامر الطباعة</h3><p>اكتب برنامجًا يطبع اسم <b>Maya</b> ثم العمر <b>13</b>، كل قيمة في سطر منفصل.</p><textarea id="code-b1" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('b1')">افحص الحل</button><button class="secondary" onclick="showSolution('b1')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-b1','result-b1')">مسح</button></div><div id="result-b1" class="result"></div></div>
+
+<div class="interactive-exercise" data-id="b2" data-expected="I\nLove\nPython" data-input=""><h3>✍️ سؤال 2 — الانتقال إلى سطر جديد</h3><p>استخدم أمر <code>print()</code> واحدًا فقط لطباعة <b>I</b> و<b>Love</b> و<b>Python</b>، كل كلمة في سطر.</p><textarea id="code-b2" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('b2')">افحص الحل</button><button class="secondary" onclick="showSolution('b2')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-b2','result-b2')">مسح</button></div><div id="result-b2" class="result"></div></div>
+
+<div class="interactive-exercise" data-id="b3" data-expected="14" data-input=""><h3>✍️ سؤال 3 — تعريف متغير وتعويض قيمة</h3><p>عرّف المتغير <code>age</code> بقيمة <b>13</b>، ثم أعطه القيمة <b>14</b>، وفي النهاية اطبع قيمته.</p><textarea id="code-b3" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('b3')">افحص الحل</button><button class="secondary" onclick="showSolution('b3')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-b3','result-b3')">مسح</button></div><div id="result-b3" class="result"></div></div>
+
+<div class="interactive-exercise" data-id="b4" data-expected="13" data-input="13"><h3>✍️ سؤال 4 — استقبال عدد صحيح</h3><p>استقبل عددًا صحيحًا من المستخدم باستخدام <code>int(input())</code>، ثم اطبعه. عند الفحص سيعطيك الموقع العدد <b>13</b>.</p><textarea id="code-b4" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('b4')">افحص الحل</button><button class="secondary" onclick="showSolution('b4')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-b4','result-b4')">مسح</button></div><div id="result-b4" class="result"></div></div>
+
+<div class="interactive-exercise" data-id="b5" data-expected="2.5" data-input="2.5"><h3>✍️ سؤال 5 — استقبال عدد عشري</h3><p>استقبل عددًا عشريًا باستخدام <code>float(input())</code>، ثم اطبعه. عند الفحص سيعطيك الموقع <b>2.5</b>.</p><textarea id="code-b5" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('b5')">افحص الحل</button><button class="secondary" onclick="showSolution('b5')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-b5','result-b5')">مسح</button></div><div id="result-b5" class="result"></div></div>
+
+<div class="interactive-exercise" data-id="b6" data-expected="Maya" data-input="Maya"><h3>✍️ سؤال 6 — استقبال نص</h3><p>استقبل اسمًا كنص باستخدام <code>input()</code>، ثم اطبعه. عند الفحص سيعطيك الموقع <b>Maya</b>.</p><textarea id="code-b6" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('b6')">افحص الحل</button><button class="secondary" onclick="showSolution('b6')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-b6','result-b6')">مسح</button></div><div id="result-b6" class="result"></div></div>
+
+<div class="interactive-exercise" data-id="b7" data-expected="23" data-input="13"><h3>✍️ سؤال 7 — استقبال عدد واستخدامه</h3><p>استقبل عددًا صحيحًا، أضف إليه <b>10</b>، ثم اطبع الناتج. عند الفحص سيدخل الموقع العدد <b>13</b>، لذلك الناتج المطلوب <b>23</b>.</p><textarea id="code-b7" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('b7')">افحص الحل</button><button class="secondary" onclick="showSolution('b7')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-b7','result-b7')">مسح</button></div><div id="result-b7" class="result"></div></div>
+
+<div class="interactive-exercise" data-id="b8" data-expected="13\n2.5\nMaya" data-input="13\n2.5\nMaya"><h3>✍️ سؤال 8 — استقبال قيم من أنواع مختلفة</h3><p>استقبل ثلاث قيم بالترتيب: عدد صحيح، عدد عشري، ثم نص. اطبع القيم الثلاث كل واحدة في سطر.</p><textarea id="code-b8" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('b8')">افحص الحل</button><button class="secondary" onclick="showSolution('b8')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-b8','result-b8')">مسح</button></div><div id="result-b8" class="result"></div></div>
+
+<div class="interactive-exercise" data-id="b9" data-expected="18" data-input=""><h3>✍️ سؤال 9 — فهم قيمة المتغير</h3><p>ما الذي سيطبعه البرنامج؟ لا تستخدم آلة حاسبة؛ اكتب الكود ثم افحصه.</p><pre><code>x = 5
+x = x + 3
+x = x + 10
+print(x)</code></pre><p>إذا فهمت أن التعويض يغيّر القيمة المخزنة في المتغير، ستعرف النتيجة.</p><textarea id="code-b9" dir="ltr" spellcheck="false" placeholder="اكتب برنامجًا يطبع النتيجة التي تتوقعها..."></textarea><div class="challenge-actions"><button onclick="checkExercise('b9')">افحص الحل</button><button class="secondary" onclick="showSolution('b9')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-b9','result-b9')">مسح</button></div><div id="result-b9" class="result"></div></div>
+</section>
 
 <section class="topic" id="turtle"><div class="topic-title"><span>02</span><div><h2>الرسم والحركة مع Turtle</h2><p>استيراد المكتبة، إنشاء السلحفاة، الحركة، الدوران وخصائص القلم.</p></div></div>
 <div class="example-grid"><article class="example"><h3>مثال 1 — خط</h3><pre><code>import turtle
