@@ -1,105 +1,110 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Python - כיתה ז׳</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>🐍 Python – כיתה ז׳</h1>
-    <a class="back-link" href="index.html">← חזרה לבחירת כיתה</a>
-    <div class="clock"><div class="city">ירושלים</div><div id="time">--:--:--</div></div>
-  </header>
+<html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>علوم الحاسوب - الصف السابع</title><link rel="stylesheet" href="style.css"></head>
+<body><header class="site-header inner-header"><a class="back-link" href="index.html">العودة إلى الصفوف</a><div class="clock"><div class="city">القدس</div><div id="time">--:--:--</div></div><div><h1>🐍 Python — الصف السابع</h1><p>الشرح والأسئلة بالعربية • الكود بالإنجليزية</p></div></header>
+<main class="learning-page"><section class="hero"><div><span class="eyebrow">المسار الكامل</span><h2>تعلّم، اكتب، افحص، وصحّح</h2><p>كل موضوع فيه عدة أمثلة وتمارين تفاعلية. اكتب الحل بنفسك ثم اضغط «افحص الحل». سيخبرك الموقع إن كان صحيحًا، ويعرض الخطأ عند وجوده.</p></div><div class="hero-note"><b>العربي</b> ← من اليمين إلى اليسار<br><code>Python</code> → من اليسار إلى اليمين</div></section>
+<nav class="topic-nav"><a href="#basics">الأساسيات</a><a href="#turtle">Turtle</a><a href="#variables">المتغيرات والحساب</a><a href="#conditions">الشروط</a><a href="#loops">الحلقات</a><a href="#functions">الدوال</a><a href="#images">الصور</a><a href="#project">المشروع</a></nav>
 
-  <main class="python-page">
-    <section class="intro">
-      <h2>תרגול Python</h2>
-      <p>תרגילים ושאלות לתלמידי כיתה ז׳ – ללא לולאות.</p>
-    </section>
+<section class="topic" id="basics"><div class="topic-title"><span>01</span><div><h2>الأساسيات والخوارزمية</h2><p>البرنامج، التسلسل، الإخراج، التعليقات ومتابعة التنفيذ.</p></div></div>
+<div class="example-grid"><article class="example"><h3>مثال 1 — طباعة</h3><pre><code>print("Hello Python")</code></pre><p>تعرض <code>print()</code> نتيجة على الشاشة.</p></article><article class="example"><h3>مثال 2 — عدة أسطر</h3><pre><code>print("Name")
+print("Age")</code></pre></article><article class="example"><h3>مثال 3 — تعليق</h3><pre><code># This is a comment
+print("Start")</code></pre></article></div>
+<div class="interactive-exercise" data-id="b1" data-expected="Maya\n13" data-input=""><h3>✍️ جرّب بنفسك</h3><p>اكتب برنامجًا يطبع اسمك ثم عمرك، كل واحد في سطر.</p><textarea id="code-b1" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('b1')">افحص الحل</button><button class="secondary" onclick="showSolution('b1')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-b1','result-b1')">مسح</button></div><div id="result-b1" class="result"></div></div>
+<div class="interactive-exercise" data-id="b2" data-expected="I\nLove\nPython" data-input=""><h3>✍️ جرّب بنفسك</h3><p>اطبع الكلمات I وLove وPython في ثلاثة أسطر.</p><textarea id="code-b2" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('b2')">افحص الحل</button><button class="secondary" onclick="showSolution('b2')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-b2','result-b2')">مسح</button></div><div id="result-b2" class="result"></div></div></section>
 
-    <section class="exercise-grid">
-      <article class="exercise-card">
-        <span class="badge">שאלה 1</span>
-        <h3>מה יודפס?</h3>
-        <pre>name = "Ali"
-print("Hello", name)</pre>
-        <button onclick="toggleAnswer(1)">הצג תשובה</button>
-        <p class="answer" id="answer1">Hello Ali</p>
-      </article>
+<section class="topic" id="turtle"><div class="topic-title"><span>02</span><div><h2>الرسم والحركة مع Turtle</h2><p>استيراد المكتبة، إنشاء السلحفاة، الحركة، الدوران وخصائص القلم.</p></div></div>
+<div class="example-grid"><article class="example"><h3>مثال 1 — خط</h3><pre><code>import turtle
+t = turtle.Turtle()
+t.forward(100)</code></pre></article><article class="example"><h3>مثال 2 — مربع</h3><pre><code>import turtle
+t = turtle.Turtle()
+t.forward(80)
+t.right(90)
+t.forward(80)
+t.right(90)
+t.forward(80)
+t.right(90)
+t.forward(80)</code></pre></article><article class="example"><h3>مثال 3 — خصائص</h3><pre><code>import turtle
+t = turtle.Turtle()
+t.pensize(4)
+t.forward(100)
+t.stamp()</code></pre></article></div>
+<div class="callout">تمارين Turtle تفحص وجود الأوامر الأساسية. بعد نجاح الفحص شغّل الكود في بيئة Python لرؤية الرسم.</div>
+<div class="interactive-exercise" data-id="t1" data-expected="undefined" data-input=""><h3>✍️ جرّب بنفسك</h3><p>اكتب كودًا ينشئ Turtle ويرسم خطًا طوله 100.</p><textarea id="code-t1" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('t1')">افحص الحل</button><button class="secondary" onclick="showSolution('t1')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-t1','result-t1')">مسح</button></div><div id="result-t1" class="result"></div></div>
+<div class="interactive-exercise" data-id="t2" data-expected="undefined" data-input=""><h3>✍️ جرّب بنفسك</h3><p>اكتب كودًا يرسم مربعًا باستخدام أربع حركات طولها 80 ودوران 90 درجة.</p><textarea id="code-t2" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('t2')">افحص الحل</button><button class="secondary" onclick="showSolution('t2')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-t2','result-t2')">مسح</button></div><div id="result-t2" class="result"></div></div></section>
 
-      <article class="exercise-card">
-        <span class="badge">שאלה 2</span>
-        <h3>השלמת קוד</h3>
-        <pre>name = ______
-print("Hello", name)</pre>
-        <button onclick="toggleAnswer(2)">הצג תשובה</button>
-        <p class="answer" id="answer2">לדוגמה: "Dana"</p>
-      </article>
+<section class="topic" id="variables"><div class="topic-title"><span>03</span><div><h2>المتغيرات، أنواع البيانات، الإدخال والحسابات</h2><p>int وfloat وstr وbool، input، التحويل والعمليات الحسابية.</p></div></div>
+<div class="example-grid"><article class="example"><h3>مثال 1 — متغيرات</h3><pre><code>age = 13
+height = 1.55
+name = "Ali"
+passed = True</code></pre></article><article class="example"><h3>مثال 2 — تحويل</h3><pre><code>num = int("87")
+print(num + 3)</code></pre></article><article class="example"><h3>مثال 3 — إدخال</h3><pre><code>name = input("Name: ")
+print("Hello", name)</code></pre></article><article class="example"><h3>مثال 4 — حساب</h3><pre><code>a = 12
+b = 5
+print(a + b)
+print(a * b)</code></pre></article></div>
+<div class="interactive-exercise" data-id="v1" data-expected="13" data-input=""><h3>✍️ جرّب بنفسك</h3><p>عرّف age بقيمة 13 واطبعها.</p><textarea id="code-v1" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('v1')">افحص الحل</button><button class="secondary" onclick="showSolution('v1')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-v1','result-v1')">مسح</button></div><div id="result-v1" class="result"></div></div>
+<div class="interactive-exercise" data-id="v2" data-expected="15" data-input="10"><h3>✍️ جرّب بنفسك</h3><p>استقبل عددًا، أضف إليه 5، ثم اطبع الناتج.</p><textarea id="code-v2" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('v2')">افحص الحل</button><button class="secondary" onclick="showSolution('v2')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-v2','result-v2')">مسح</button></div><div id="result-v2" class="result"></div></div>
+<div class="interactive-exercise" data-id="v3" data-expected="Hello Ali" data-input=""><h3>✍️ جرّب بنفسك</h3><p>عرّف name بقيمة Ali ثم اطبع Hello Ali.</p><textarea id="code-v3" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('v3')">افحص الحل</button><button class="secondary" onclick="showSolution('v3')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-v3','result-v3')">مسح</button></div><div id="result-v3" class="result"></div></div></section>
 
-      <article class="exercise-card">
-        <span class="badge">שאלה 3</span>
-        <h3>המרת מספר</h3>
-        <pre>num = int("87")
-print(num)</pre>
-        <button onclick="toggleAnswer(3)">הצג תשובה</button>
-        <p class="answer" id="answer3">87 – המשתנה num הוא מספר שלם (int).</p>
-      </article>
+<section class="topic" id="conditions"><div class="topic-title"><span>04</span><div><h2>الشروط والمنطق</h2><p>if وelse والمقارنات وand وor.</p></div></div>
+<div class="example-grid"><article class="example"><h3>مثال 1</h3><pre><code>age = 13
+if age >= 12:
+    print("Allowed")</code></pre></article><article class="example"><h3>مثال 2</h3><pre><code>grade = 75
+if grade >= 60:
+    print("Pass")
+else:
+    print("Fail")</code></pre></article><article class="example"><h3>مثال 3 — and</h3><pre><code>age = 14
+has_card = True
+if age >= 13 and has_card:
+    print("Enter")</code></pre></article></div>
+<div class="interactive-exercise" data-id="c1" data-expected="Big" data-input="12"><h3>✍️ جرّب بنفسك</h3><p>استقبل عددًا. إذا كان 10 أو أكثر اطبع Big، وإلا Small.</p><textarea id="code-c1" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('c1')">افحص الحل</button><button class="secondary" onclick="showSolution('c1')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-c1','result-c1')">مسح</button></div><div id="result-c1" class="result"></div></div>
+<div class="interactive-exercise" data-id="c2" data-expected="Fail" data-input="55"><h3>✍️ جرّب بنفسك</h3><p>استقبل علامة. إذا كانت 60 أو أكثر اطبع Pass، وإلا Fail.</p><textarea id="code-c2" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('c2')">افحص الحل</button><button class="secondary" onclick="showSolution('c2')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-c2','result-c2')">مسح</button></div><div id="result-c2" class="result"></div></div>
+<div class="interactive-exercise" data-id="c3" data-expected="Teen" data-input="15"><h3>✍️ جرّب بنفسك</h3><p>استقبل عمرًا. إذا كان بين 13 و18 شاملًا اطبع Teen، وإلا Other.</p><textarea id="code-c3" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('c3')">افحص الحل</button><button class="secondary" onclick="showSolution('c3')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-c3','result-c3')">مسح</button></div><div id="result-c3" class="result"></div></div></section>
 
-      <article class="exercise-card">
-        <span class="badge">שאלה 4</span>
-        <h3>מחרוזות</h3>
-        <pre>m = "H" + "L" * 2 + "WORLD"
-print(m)</pre>
-        <button onclick="toggleAnswer(4)">הצג תשובה</button>
-        <p class="answer" id="answer4">HLLWORLD</p>
-      </article>
+<section class="topic" id="loops"><div class="topic-title"><span>05</span><div><h2>التنفيذ المتكرر — الحلقات</h2><p>for وrange، وفكرة التكرار وشرط التوقف.</p></div></div>
+<div class="example-grid"><article class="example"><h3>مثال 1 — for</h3><pre><code>for i in range(5):
+    print(i)</code></pre></article><article class="example"><h3>مثال 2 — تكرار</h3><pre><code>for i in range(3):
+    print("Python")</code></pre></article><article class="example"><h3>مثال 3 — while</h3><pre><code>n = 1
+while n <= 3:
+    print(n)
+    n = n + 1</code></pre></article></div>
+<div class="interactive-exercise" data-id="l1" data-expected="1\n2\n3" data-input=""><h3>✍️ جرّب بنفسك</h3><p>استخدم for وrange لطباعة 1 ثم 2 ثم 3.</p><textarea id="code-l1" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('l1')">افحص الحل</button><button class="secondary" onclick="showSolution('l1')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-l1','result-l1')">مسح</button></div><div id="result-l1" class="result"></div></div>
+<div class="interactive-exercise" data-id="l2" data-expected="Python\nPython\nPython\nPython" data-input=""><h3>✍️ جرّب بنفسك</h3><p>استخدم for لطباعة Python أربع مرات.</p><textarea id="code-l2" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('l2')">افحص الحل</button><button class="secondary" onclick="showSolution('l2')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-l2','result-l2')">مسح</button></div><div id="result-l2" class="result"></div></div></section>
 
-      <article class="exercise-card">
-        <span class="badge">שאלה 5</span>
-        <h3>מה יודפס?</h3>
-        <pre>w = "World"
-print("Hello " + w)</pre>
-        <button onclick="toggleAnswer(5)">הצג תשובה</button>
-        <p class="answer" id="answer5">Hello World</p>
-      </article>
+<section class="topic" id="functions"><div class="topic-title"><span>06</span><div><h2>الدوال واستدعاؤها والمعاملات</h2><p>تعريف الدالة، استدعاؤها، المعاملات وreturn.</p></div></div>
+<div class="example-grid"><article class="example"><h3>مثال 1</h3><pre><code>def hello():
+    print("Hello")
+hello()</code></pre></article><article class="example"><h3>مثال 2 — معامل</h3><pre><code>def greet(name):
+    print("Hello", name)
+greet("Ali")</code></pre></article><article class="example"><h3>مثال 3 — return</h3><pre><code>def add(a, b):
+    return a + b
+print(add(4, 5))</code></pre></article></div>
+<div class="interactive-exercise" data-id="f1" data-expected="25" data-input=""><h3>✍️ جرّب بنفسك</h3><p>اكتب دالة square تعيد مربع العدد، ثم اطبع square(5).</p><textarea id="code-f1" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('f1')">افحص الحل</button><button class="secondary" onclick="showSolution('f1')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-f1','result-f1')">مسح</button></div><div id="result-f1" class="result"></div></div>
+<div class="interactive-exercise" data-id="f2" data-expected="Hello Ali" data-input=""><h3>✍️ جرّب بنفسك</h3><p>اكتب دالة greet تطبع Hello واسم الشخص، ثم استدعها مع Ali.</p><textarea id="code-f2" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('f2')">افحص الحل</button><button class="secondary" onclick="showSolution('f2')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-f2','result-f2')">مسح</button></div><div id="result-f2" class="result"></div></div>
+<div class="interactive-exercise" data-id="f3" data-expected="15" data-input=""><h3>✍️ جرّب بنفسك</h3><p>اكتب دالة add تعيد مجموع عددين، ثم اطبع add(7,8).</p><textarea id="code-f3" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkExercise('f3')">افحص الحل</button><button class="secondary" onclick="showSolution('f3')">عرض الحل</button><button class="secondary" onclick="clearEditor('code-f3','result-f3')">مسح</button></div><div id="result-f3" class="result"></div></div></section>
 
-      <article class="exercise-card">
-        <span class="badge">שאלה 6</span>
-        <h3>תיקון שגיאה</h3>
-        <pre>print("I Love Python")</pre>
-        <p>שנה את הקוד כך שכל מילה תופיע בשורה נפרדת.</p>
-        <button onclick="toggleAnswer(6)">הצג תשובה</button>
-        <p class="answer" id="answer6"><code>print("I\nLove\nPython")</code></p>
-      </article>
+<section class="topic" id="images"><div class="topic-title"><span>07</span><div><h2>مدخل إلى الصور ومعالجتها</h2><p>الصورة كبيانات، الأبعاد، التدوير والتحويل إلى رمادي.</p></div></div>
+<div class="example-grid"><article class="example"><h3>فتح صورة</h3><pre><code>from PIL import Image
+img = Image.open("photo.jpg")
+print(img.size)</code></pre></article><article class="example"><h3>تدوير</h3><pre><code>from PIL import Image
+img = Image.open("photo.jpg")
+rotated = img.rotate(90)
+rotated.save("rotated.jpg")</code></pre></article><article class="example"><h3>رمادي</h3><pre><code>from PIL import Image
+img = Image.open("photo.jpg")
+gray = img.convert("L")
+gray.save("gray.jpg")</code></pre></article></div><div class="callout">هذا القسم يشرح أساسيات معالجة الصور كما تظهر في مسار الصف السابع. المختبر التفاعلي للصور سيضاف لاحقًا.</div></section>
 
-      <article class="exercise-card">
-        <span class="badge">שאלה 7</span>
-        <h3>הדפסה חוזרת</h3>
-        <pre>name = "Maya"
-print(name * 4)</pre>
-        <button onclick="toggleAnswer(7)">הצג תשובה</button>
-        <p class="answer" id="answer7">MayaMayaMayaMaya</p>
-      </article>
-
-      <article class="exercise-card">
-        <span class="badge">שאלה 8</span>
-        <h3>חשיבה על קוד</h3>
-        <pre>a = 5
-b = 3
-print(a + b)</pre>
-        <button onclick="toggleAnswer(8)">הצג תשובה</button>
-        <p class="answer" id="answer8">8</p>
-      </article>
-    </section>
-  </main>
-  <script src="script.js"></script>
-  <script>
-    function toggleAnswer(number) {
-      const answer = document.getElementById("answer" + number);
-      answer.classList.toggle("show");
-    }
-  </script>
-</body>
-</html>
+<section class="topic" id="project"><div class="topic-title"><span>08</span><div><h2>مشروع وتحديات</h2><p>دمج المتغيرات والشروط والحلقات والدوال في مشروعات صغيرة.</p></div></div>
+<div class="project-grid"><article class="project-card"><h3>🎯 لعبة التخمين</h3><pre><code>from random import randint
+secret = randint(1, 10)
+guess = int(input("Guess: "))
+if guess == secret:
+    print("Correct")
+else:
+    print("Try again")</code></pre></article><article class="project-card"><h3>🔢 تحدي الرقم الثلاثي</h3><pre><code>n = 485
+a = n // 100
+b = (n // 10) % 10
+c = n % 10
+print(a**2 + b**2 + c**2)</code></pre><p>الناتج للعدد 485 هو 105.</p></article><article class="project-card"><h3>🐢 تحدي الرسم</h3><p>قسّم الشكل إلى خطوات صغيرة ثم اكتب برنامج Turtle يرسمه.</p></article></div>
+<div class="challenge"><h3>🏆 تحدي نهائي</h3><p>اكتب برنامجًا يستقبل ثلاث علامات، يحسب المتوسط، ثم يطبع Excellent إذا كان المتوسط 90 فأكثر، Pass إذا كان 60 فأكثر، وإلا Fail.</p><textarea id="final-code" dir="ltr" spellcheck="false" placeholder="Write your Python code here..."></textarea><div class="challenge-actions"><button onclick="checkFinal()">افحص الحل</button><button class="secondary" onclick="clearEditor('final-code','final-result')">مسح</button></div><div id="final-result" class="result"></div></div></section>
+<section class="tips"><h2>طريقة التعلم</h2><div class="tip-grid"><div><b>1. اقرأ</b><span>افهم الشرح بالعربية.</span></div><div><b>2. شاهد</b><span>راجع أكثر من مثال.</span></div><div><b>3. اكتب</b><span>جرّب الحل بنفسك.</span></div><div><b>4. افحص</b><span>اعرف أين أخطأت.</span></div></div></section>
+</main><script src="https://cdn.jsdelivr.net/pyodide/v0.27.2/full/pyodide.js"></script><script src="script.js"></script></body></html>
