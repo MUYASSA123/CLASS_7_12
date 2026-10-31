@@ -8,3 +8,18 @@ function showSolution(id){const e=document.querySelector('[data-id="'+id+'"]');c
 function norm(s){return String(s).replace(/\r/g,"").trim()}
 async function checkExercise(id){const box=document.querySelector('[data-id="'+id+'"]');const code=document.getElementById("code-"+id).value.trim();if(!code){res("result-"+id,"error","❌ اكتب الكود أولًا.");return}res("result-"+id,"info","⏳ يجري فحص الكود...");try{const py=await loadPy();const vals=box.dataset.input?box.dataset.input.split("\n"):[];const runner='import builtins,io,contextlib\n_values='+JSON.stringify(vals)+'\n_it=iter(_values)\nbuiltins.input=lambda prompt="": next(_it)\n_out=io.StringIO()\nwith contextlib.redirect_stdout(_out):\n    exec('+JSON.stringify(code)+', {})\n_out.getvalue()';const out=norm(await py.runPythonAsync(runner));const expected=norm(box.dataset.expected||"");if(out===expected)res("result-"+id,"success","✅ صحيح!","الناتج مطابق.");else res("result-"+id,"error","❌ الحل غير صحيح بعد.",'<p>الناتج الذي حصلت عليه:</p><pre>'+esc(out||"(لا يوجد ناتج)")+'</pre><p><b>تلميح:</b> قارن الناتج المطلوب، وتحقق من المتغيرات والعمليات والشرط أو المسافات داخل النص.</p>')}catch(err){res("result-"+id,"error","❌ يوجد خطأ في الكود.",'<pre>'+esc(String(err))+'</pre><p>رسالة الخطأ تساعدك على معرفة السطر الذي يحتاج إلى تصحيح.</p>')}}
 async function checkFinal(){const code=document.getElementById("final-code").value.trim();if(!code){res("final-result","error","❌ اكتب الكود أولًا.");return}try{const py=await loadPy();const runner='import builtins,io,contextlib\n_values=["90","80","100"]\n_it=iter(_values)\nbuiltins.input=lambda prompt="": next(_it)\n_out=io.StringIO()\nwith contextlib.redirect_stdout(_out):\n    exec('+JSON.stringify(code)+', {})\n_out.getvalue()';const out=norm(await py.runPythonAsync(runner));if(out==="Excellent")res("final-result","success","🏆 ممتاز!","الحل صحيح للاختبار.");else res("final-result","error","❌ النتيجة غير مطابقة.","للاختبار الحالي يجب أن يطبع البرنامج <code>Excellent</code>.")}catch(err){res("final-result","error","❌ يوجد خطأ في الكود.",'<pre>'+esc(String(err))+'</pre>')}}
+function openTopic(id){
+ const menu=document.getElementById("topics-menu");
+ document.querySelectorAll(".topic-content").forEach(x=>x.classList.remove("active-topic"));
+ const topic=document.getElementById(id);
+ if(!topic)return;
+ menu.style.display="none";
+ topic.classList.add("active-topic");
+ topic.scrollIntoView({behavior:"smooth",block:"start"});
+}
+function backToTopics(){
+ document.querySelectorAll(".topic-content").forEach(x=>x.classList.remove("active-topic"));
+ const menu=document.getElementById("topics-menu");
+ menu.style.display="block";
+ menu.scrollIntoView({behavior:"smooth",block:"start"});
+}
