@@ -6,14 +6,14 @@
 <h2>اختر الموضوع الذي تريد تعلّمه</h2>
 <p>اضغط على أحد المواضيع لفتح الشرح، الأمثلة والأسئلة الخاصة به.</p>
 <div class="topics-menu-grid">
-<button class="topic-menu-card" onclick="openTopic('basics')"><span>01</span><b>الأساسيات</b><small>الطباعة، المتغيرات والاستقبال</small></button>
-<button class="topic-menu-card" onclick="openTopic('turtle')"><span>02</span><b>Turtle</b><small>الرسم والحركة</small></button>
-<button class="topic-menu-card" onclick="openTopic('variables')"><span>03</span><b>المتغيرات والحساب</b><small>أنواع البيانات والعمليات</small></button>
-<button class="topic-menu-card" onclick="openTopic('conditions')"><span>04</span><b>الشروط</b><small>if و else والمنطق</small></button>
-<button class="topic-menu-card" onclick="openTopic('loops')"><span>05</span><b>الحلقات</b><small>for و range والتكرار</small></button>
-<button class="topic-menu-card" onclick="openTopic('functions')"><span>06</span><b>الدوال</b><small>تعريف الدوال واستدعاؤها</small></button>
-<button class="topic-menu-card" onclick="openTopic('images')"><span>07</span><b>معالجة الصور</b><small>فتح الصور وتعديلها</small></button>
-<button class="topic-menu-card" onclick="openTopic('project')"><span>08</span><b>المشاريع والتحديات</b><small>طبّق ما تعلمته</small></button>
+<button class="topic-menu-card" onclick="document.getElementById('basics').style.display='block';document.getElementById('topics-menu').style.display='none';document.getElementById('basics').scrollIntoView()"><span>01</span><b>الأساسيات</b><small>الطباعة، المتغيرات والاستقبال</small></button>
+<button class="topic-menu-card" onclick="document.getElementById('turtle').style.display='block';document.getElementById('topics-menu').style.display='none';document.getElementById('turtle').scrollIntoView()"><span>02</span><b>Turtle</b><small>الرسم والحركة</small></button>
+<button class="topic-menu-card" onclick="document.getElementById('variables').style.display='block';document.getElementById('topics-menu').style.display='none';document.getElementById('variables').scrollIntoView()"><span>03</span><b>المتغيرات والحساب</b><small>أنواع البيانات والعمليات</small></button>
+<button class="topic-menu-card" onclick="document.getElementById('conditions').style.display='block';document.getElementById('topics-menu').style.display='none';document.getElementById('conditions').scrollIntoView()"><span>04</span><b>الشروط</b><small>if و else والمنطق</small></button>
+<button class="topic-menu-card" onclick="document.getElementById('loops').style.display='block';document.getElementById('topics-menu').style.display='none';document.getElementById('loops').scrollIntoView()"><span>05</span><b>الحلقات</b><small>for و range والتكرار</small></button>
+<button class="topic-menu-card" onclick="document.getElementById('functions').style.display='block';document.getElementById('topics-menu').style.display='none';document.getElementById('functions').scrollIntoView()"><span>06</span><b>الدوال</b><small>تعريف الدوال واستدعاؤها</small></button>
+<button class="topic-menu-card" onclick="document.getElementById('images').style.display='block';document.getElementById('topics-menu').style.display='none';document.getElementById('images').scrollIntoView()"><span>07</span><b>معالجة الصور</b><small>فتح الصور وتعديلها</small></button>
+<button class="topic-menu-card" onclick="document.getElementById('project').style.display='block';document.getElementById('topics-menu').style.display='none';document.getElementById('project').scrollIntoView()"><span>08</span><b>المشاريع والتحديات</b><small>طبّق ما تعلمته</small></button>
 </div></section>
 
 <section class="topic topic-content" id="basics"><button class="back-to-topics" onclick="backToTopics()">← العودة إلى المواضيع</button><div class="topic-title"><span>01</span><div><h2>الأساسيات — الطباعة والمتغيرات والاستقبال</h2><p>نتعلم كيف نطبع المعلومات، نعرّف المتغيرات، نغيّر قيمها، ونستقبل أعدادًا صحيحة وعشرية ونصوصًا من المستخدم.</p></div></div>
