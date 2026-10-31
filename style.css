@@ -46,3 +46,64 @@ main { max-width:1100px; margin:0 auto; padding:55px 24px; }
 .grade-card:hover { transform:translateY(-3px); box-shadow:0 7px 20px rgba(0,0,0,.09); }
 @media (max-width:700px) { .grades { grid-template-columns:repeat(2,1fr); } }
 @media (max-width:430px) { .grades { grid-template-columns:1fr; } h1 { font-size:28px; } }
+
+/* Grade 7 Python page */
+.back-link {
+  position: absolute;
+  right: 28px;
+  top: 22px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+.python-page { padding-top: 35px; }
+.intro { text-align: center; margin-bottom: 35px; }
+.intro h2 { font-size: 30px; margin: 0 0 10px; }
+.intro p { color: #666; font-size: 17px; }
+.exercise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 22px;
+}
+.exercise-card {
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(0,0,0,.05);
+}
+.exercise-card h3 { margin: 12px 0; font-size: 22px; }
+.exercise-card pre {
+  direction: ltr;
+  text-align: left;
+  background: #f7f7f7;
+  padding: 16px;
+  border-radius: 10px;
+  overflow-x: auto;
+  font-size: 16px;
+}
+.exercise-card button {
+  border: 0;
+  border-radius: 9px;
+  padding: 10px 16px;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+}
+.badge {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+.answer { display: none; margin-top: 14px; padding: 12px; border-radius: 9px; background: #f4f4f4; }
+.answer.show { display: block; }
+.answer code { direction: ltr; display: block; text-align: left; }
+
+@media (max-width: 700px) {
+  .exercise-grid { grid-template-columns: 1fr; }
+  .back-link { position: static; margin: 10px; }
+}
