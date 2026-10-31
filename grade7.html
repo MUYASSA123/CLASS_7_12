@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python - כיתה ז׳</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🐍 Python – כיתה ז׳</h1>
+    <a class="back-link" href="index.html">← חזרה לבחירת כיתה</a>
+    <div class="clock"><div class="city">ירושלים</div><div id="time">--:--:--</div></div>
+  </header>
+
+  <main class="python-page">
+    <section class="intro">
+      <h2>תרגול Python</h2>
+      <p>תרגילים ושאלות לתלמידי כיתה ז׳ – ללא לולאות.</p>
+    </section>
+
+    <section class="exercise-grid">
+      <article class="exercise-card">
+        <span class="badge">שאלה 1</span>
+        <h3>מה יודפס?</h3>
+        <pre>name = "Ali"
+print("Hello", name)</pre>
+        <button onclick="toggleAnswer(1)">הצג תשובה</button>
+        <p class="answer" id="answer1">Hello Ali</p>
+      </article>
+
+      <article class="exercise-card">
+        <span class="badge">שאלה 2</span>
+        <h3>השלמת קוד</h3>
+        <pre>name = ______
+print("Hello", name)</pre>
+        <button onclick="toggleAnswer(2)">הצג תשובה</button>
+        <p class="answer" id="answer2">לדוגמה: "Dana"</p>
+      </article>
+
+      <article class="exercise-card">
+        <span class="badge">שאלה 3</span>
+        <h3>המרת מספר</h3>
+        <pre>num = int("87")
+print(num)</pre>
+        <button onclick="toggleAnswer(3)">הצג תשובה</button>
+        <p class="answer" id="answer3">87 – המשתנה num הוא מספר שלם (int).</p>
+      </article>
+
+      <article class="exercise-card">
+        <span class="badge">שאלה 4</span>
+        <h3>מחרוזות</h3>
+        <pre>m = "H" + "L" * 2 + "WORLD"
+print(m)</pre>
+        <button onclick="toggleAnswer(4)">הצג תשובה</button>
+        <p class="answer" id="answer4">HLLWORLD</p>
+      </article>
+
+      <article class="exercise-card">
+        <span class="badge">שאלה 5</span>
+        <h3>מה יודפס?</h3>
+        <pre>w = "World"
+print("Hello " + w)</pre>
+        <button onclick="toggleAnswer(5)">הצג תשובה</button>
+        <p class="answer" id="answer5">Hello World</p>
+      </article>
+
+      <article class="exercise-card">
+        <span class="badge">שאלה 6</span>
+        <h3>תיקון שגיאה</h3>
+        <pre>print("I Love Python")</pre>
+        <p>שנה את הקוד כך שכל מילה תופיע בשורה נפרדת.</p>
+        <button onclick="toggleAnswer(6)">הצג תשובה</button>
+        <p class="answer" id="answer6"><code>print("I\nLove\nPython")</code></p>
+      </article>
+
+      <article class="exercise-card">
+        <span class="badge">שאלה 7</span>
+        <h3>הדפסה חוזרת</h3>
+        <pre>name = "Maya"
+print(name * 4)</pre>
+        <button onclick="toggleAnswer(7)">הצג תשובה</button>
+        <p class="answer" id="answer7">MayaMayaMayaMaya</p>
+      </article>
+
+      <article class="exercise-card">
+        <span class="badge">שאלה 8</span>
+        <h3>חשיבה על קוד</h3>
+        <pre>a = 5
+b = 3
+print(a + b)</pre>
+        <button onclick="toggleAnswer(8)">הצג תשובה</button>
+        <p class="answer" id="answer8">8</p>
+      </article>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  <script>
+    function toggleAnswer(number) {
+      const answer = document.getElementById("answer" + number);
+      answer.classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
