@@ -8,3 +8,5 @@
 - שעון ירושלים בצד שמאל
 
 האתר בנוי כעמוד HTML פשוט ללא צורך ב-Node.js.
+
+GitHub Pages deployment enabled.
