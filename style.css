@@ -26,3 +26,16 @@ textarea{width:100%;min-height:160px;resize:vertical;border:2px solid #cbd5e1;bo
 .welcome{text-align:center;margin-bottom:32px}.welcome h2{font-size:34px}.welcome p{color:var(--muted)}.grades{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.grade-card{min-height:155px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-decoration:none;background:#fff;color:var(--navy);border:1px solid var(--line);border-radius:20px;box-shadow:0 6px 20px #1720330b}.grade-card span{font-size:28px;font-weight:800}.grade-card small{color:var(--muted);font-size:18px}
 @media(max-width:850px){.grades,.example-grid,.project-grid{grid-template-columns:1fr}.hero{flex-direction:column;align-items:stretch}.tip-grid{grid-template-columns:1fr 1fr}.hero-note{min-width:0}}
 @media(max-width:600px){body{font-size:16px}.site-header{min-height:190px}.site-header h1{font-size:31px}.site-header p{font-size:17px}.clock{position:static;margin-bottom:10px}.back-link{position:static;margin-bottom:12px}.topic-nav{position:static}.topic{padding:20px}.topic-title h2{font-size:25px}.interactive-exercise p{font-size:17px}.tip-grid{grid-template-columns:1fr}.hero{padding:24px}.hero h2{font-size:28px}}
+
+/* Grade 7 topic chooser */
+.topics-menu{margin:32px 0;padding:34px;background:#fff;border-radius:24px;box-shadow:0 10px 35px rgba(15,23,42,.08);text-align:center}
+.topics-menu>h2{font-size:32px;margin:0 0 8px}.topics-menu>p{font-size:18px;margin:0 0 28px;color:#64748b}
+.topics-menu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.topic-menu-card{min-height:190px;border:1px solid #dbe4f0;border-radius:22px;background:#fff;padding:24px 18px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;box-shadow:0 7px 22px rgba(15,23,42,.07);transition:.2s}
+.topic-menu-card:hover{transform:translateY(-5px);box-shadow:0 14px 32px rgba(15,23,42,.13);border-color:#2563eb}
+.topic-menu-card span{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:#eaf2ff;color:#1d4ed8;font-weight:800;font-size:18px}
+.topic-menu-card b{font-size:22px;color:#0f172a}.topic-menu-card small{font-size:15px;color:#64748b;line-height:1.6}
+.topic-content{display:none}.topic-content.active-topic{display:block}
+.back-to-topics{border:0;background:#eef4ff;color:#1d4ed8;padding:11px 18px;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;margin-bottom:22px}
+@media(max-width:900px){.topics-menu-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.topics-menu{padding:22px 14px}.topics-menu-grid{grid-template-columns:1fr}.topic-menu-card{min-height:145px}}
